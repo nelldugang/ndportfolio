@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style type="text/css">
+      :root { scroll-behavior: auto; }
+
+      
+      @font-face {
+            font-family: DK;
+/*            font-weight: bold;*/
+            src: url("DK_Lemon.otf") format("opentype");
+        }
+
+      @media only screen and (max-width: 990px) {
+          .about {
+          height: 100% !important;
+          }
+          .d-grid {
+            display: flex !important;
+          }
+        }
+
+        @media only screen and (min-width: 991px) and (max-width: 1400px) {
+          .about {
+          height: 100% !important;
+          }
+        }
+
+        @media only screen and (min-width: 1400px) {
+          /*.about {
+            position: relative;
+          }*/
+
+        }
+
+        .container-fluid {
+          padding:0px;
+        }
+        .navbar-toggler {
+          margin-left:10px;
+        }
+        .about {
+          height: 80vh;
+          background-color:#dcecee;
+          }
+
+        h1, h2, h3 {
+          font-family: DK;
+        }
+
+        .projects, .experience, .business {
+          margin-top: 150px;
+          margin-bottom: 150px;
+        }
+
+        .center {
+          text-align: center;
+        }
+
+        .experience {
+          background-color:#f2f2f2;
+          padding: 150px 0 150px;
+        }
+
+        .footer {
+          background-color:#46494d;
+        }
+
+        .footer h5, .footer p {
+          color: #dcecee;
+        }
+
+        .exp-header {
+          padding-bottom:50px;
+        }
+
+        .card-img-top {
+          object-fit: cover;
+        }
+
+        .picons {
+          display: inline-block;
+          height: 25px;
+          margin: 5px;
+        }
+
+        .box-shadow {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .link-icon {
+          width: 20px;
+          filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%) !important;
+        }
+
+        .accordion-button {
+          display: grid;
+        }
+
+        .accordion-item {
+          margin: 20px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .accordion-button:not(.collapsed) {
+          color: black !important;
+          background-color: #dcecee;
+          box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+          border-top-left-radius: 1rem !important;
+          border-top-right-radius: 1rem !important;
+        }
+
+        .accordion-button::after {
+          position: absolute;
+          margin-right: 10px;
+          right: 0;
+        }
+
+        .accordion-button p {
+          margin-bottom: 0;
+        }
+
+        .accordion-item {
+          border-radius: 1rem !important;
+        }
+
+        .accordion-button:is(.collapsed) {
+          border-radius: 1rem !important;
+        }
+
+        .card-img-top {
+          
+          border-top-left-radius: 1rem !important;
+          border-top-right-radius: 1rem !important;
+        }
+        .card {
+          border-radius: 1rem !important;
+        }
+
+        .shop-collection-view__item {
+          padding: 5px;
+        }
+
+        .shop-collection-view__item img {
+          width: 100%;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .business-container-padding {
+          padding: 20px 0;
+        }
+
+        .social-icons {
+          width:20px;
+        }
+
+        .container-icons {
+          text-align: left;
+        }
+
+    </style>
+  </head>
+  <body>
+    <!-- <section class="main">
+      <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-center" id="navbarText">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">About Me</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Experience</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+          </nav>
+      </div>
+    </section> -->
+<section class="about">
+    <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="images/me.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Hi, I'm Nell Dugang</h1>
+        <p class="lead">Front End Developer. Creating engaging and interactive user experiences on the web. With a keen eye for design and a strong understanding of HTML, CSS, and JavaScript, I craft responsive and visually appealing websites and applications. My passion lies in translating design concepts into functional and user-friendly interfaces, constantly staying updated with the latest trends and technologies in the ever-evolving landscape of web development. </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                      <img src="images/html.png" class="picons">
+                      <img src="images/css-3.png" class="picons">
+                      <img src="images/js.png" class="picons">
+                      <img src="images/bootstrap.png" class="picons">
+                      <img src="images/jquery.png" class="picons">
+                      <img src="images/php.png" class="picons">
+                      <img src="images/laravel.png" class="picons">
+                      <img src="images/mysql.png" class="picons">
+                      <img src="images/photoshop.png" class="picons">
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="divider">
+    <div class="row">&nbsp;</div>
+</section>
+
+
+    <section class="projects">
+      <div class="container">
+          <div class="row">
+            <div class="col center">
+              <h1 class="display-5 fw-bold lh-1 mb-3 ">Projects</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col center">
+              <p class="">&nbsp;</p>
+              <br/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top for-projects" src="images/oldport.jpg" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                  <h6 class="card-text">Portfolio</h6>
+                  <small>My Old Portfolio</small>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                      <img src="images/html.png" class="picons">
+                      <img src="images/css-3.png" class="picons">
+                      <img src="images/js.png" class="picons">
+                      
+                    </div>
+                    <a href="https://nelldugang.github.io/port/" target="_blank"><img class="link-icon" src="images/external-link.png" ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="images/tourista.jpg" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                  <h6 class="card-text">Tourista</h6>
+                  <small>A Travel Blog</small>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <img src="images/html.png" class="picons">
+                      <img src="images/css-3.png" class="picons">
+                      <img src="images/js.png" class="picons">
+                    </div>
+                    <a href="https://nelldugang.github.io/tourista1/capstone1.html" target="_blank"><img class="link-icon" src="images/external-link.png" ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="images/dg2.jpg" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]"  data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                  <h6 class="card-text">DG2 Snow</h6>
+                  <small>Online Store about snow boards</small>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <img src="images/html.png" class="picons">
+                      <img src="images/css-3.png" class="picons">
+                      <img src="images/js.png" class="picons">
+                      <img src="images/php.png" class="picons">
+                      <img src="images/mysql.png" class="picons">
+                      <img src="images/bootstrap.png" class="picons">
+                    </div>
+                    <a href="" onclick="return false;" target="_blank"><img class="link-icon" src="external-link.png" ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+          <div class="row">
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top for-projects" src="images/inked.jpg" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                  <h6 class="card-text">Inked</h6>
+                  <small>Blog About Tattoos</small>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                      <img src="images/html.png" class="picons">
+                      <img src="images/css-3.png" class="picons">
+                      <img src="images/js.png" class="picons">
+                      <img src="images/jquery.png" class="picons">
+                      <img src="images/laravel.png" class="picons">
+                      <img src="images/mysql.png" class="picons">
+                      <img src="images/bootstrap.png" class="picons">
+                      
+                    </div>
+                    <a href="" onclick="return false;" target="_blank"><img class="link-icon" src="external-link.png" ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+    </section>
+
+    <section class="experience">
+      <div class="container">
+        <div class="row">
+           <div class="col center">
+            <h1 class="display-5 fw-bold lh-1 mb-3 exp-header">Work Experience</h1>
+          </div>
+        </div>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <h4>Technical Consultant - Front End Developer</h4>
+              <h5>Silkroad Technology Inc.</h5>
+              <p><em>September 2018 - April 2023</em></p>
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+              <ul>
+                <li>Create web forms for clients onboarding using HTML, CSS and Javascript/jQuery. </li>
+                <li>Assure that all user input is validated depending on the clients request. </li>
+                <li>Ensure that web forms are responsive or mobile friendly. </li>
+                <li>Peer to peer Quality Assurance. </li>
+                <li>Fix bugs and errors.  </li>
+                <li>Ensure that data are captured in PDF </li>
+                <li>Create/Edit PDF forms </li>
+                <li>Ensure that integrations from Recruiting to Onboarding are working using xml </li>
+              </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <h4>Financial Advisor/Chat Support Representative </h4>
+              <h5>Intelenet Global Services Inc,</h5>
+              <p><em>June 2017– February 2018</em></p>
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <ul>
+                <li>Provides assistance via chat with their bank information </li>
+                <li>Document each customer’s question or problem as well as the resulting answer or solution </li>
+                <li>Process bank transfer. </li>
+                <li>Process opening and closing of bank accounts </li>
+                <li>Provide customer bank transactions or billing as well as the remaining balance. </li>
+                <li>Resolves complaints </li>
+              </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <h4>Email/Chat Support Representative  </h4>
+              <h5>TaskUs Inc. </h5>
+              <p><em>August 2015 – June 2016</em></p>
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <ul>
+                <li>Handles customer inquiry through chat and email  </li>
+                <li>Developing customer relationships  </li>
+                <li>Solving customer issues  </li>
+                <li>Promoting products and services and maintain their job knowledge  </li>
+                <li>Provide customer bank transactions or billing as well as the remaining balance. </li>
+                <li>Forwarding unresolved queries to specialists </li>
+              </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        <h4>Back Office Associate  </h4>
+              <h5>Customer Contact Channels</h5>
+              <p><em>March 2014 – July 2015</em></p>
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       <ul>
+                <li>Approve or rejects prescription requests by patients.  </li>
+                <li>Data Entry of medical terms.  </li>
+                <li>Checks if customer is qualified to avail the prescription. </li>
+              </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        <h4>Data Entry Associate</h4>
+              <h5>Fuji Xerox Document Management Solutions </h5>
+              <p><em>December 2012 – August 2014</em></p>
+              <p>
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       <ul>
+                <li>Encode scanned documents such as Birth, Death, Marriage certificates accurately and efficiently.  </li>
+                <li>Performs quality control checks on the information that was encoded. </li>
+              </ul>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+
+
+
+    </section>
+
+
+
+    <section class="business">
+      <div class="container">
+      <div class="row">
+        <div class="col center business-container-padding">
+          <h2>Small Business</h2>
+          <p>I have a small business making custom mousepads. I also make customize lunch bags, coasters, mugs, wallet. If interested please contact us through our shopee or FB Page.</p>
+          <div class="row">
+            <div class="col">
+              <div class="card bg-light mb-3">
+                <div class="card-header">Dugsdupak</div>
+                <div class="card-body container-icons">
+                  <!-- <h5 class="card-title">Light card title</h5> -->
+                  <p class="card-text">For customize extended mousepads, please check out our shopee and facebook page.</p><br>
+                  <a href="https://www.facebook.com/dugsdupak/" target="_blank"><img class="social-icons" src="images/facebook.png"></a>
+                   <a href="https://shopee.ph/dugsdupak" target="_blank"><img class="social-icons" src="images/shopee.png"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card bg-light mb-3">
+                  <div class="card-header">ND Customs</div>
+                  <div class="card-body container-icons">
+                    
+                    <p class="card-text">For variety of customize or personalize products, please check out our shopee and facebook page. </p>
+                     <a href="https://www.facebook.com/ndsthtcs/" target="_blank"><img class="social-icons" src="images/facebook.png"></a>
+                     <a href="https://shopee.ph/ndcustoms" target="_blank"><img class="social-icons" src="images/shopee.png"></a>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <!-- <div class="container-icons">
+            <img class="social-icons" src="facebook.png"><span> facebook.com/dugsdupak</span><br>
+            <img class="social-icons" src="shopee.png"><span> shopee.ph/dugsdupak</span>
+          </div> -->
+          <img src="images/mousedes.jpg" class="img-fluid">
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col">
+          <div class="shopee-header-section__content">
+            <div class="row center">
+              <div class="col-xs-12 col-lg-2 shop-collection-view__item">
+                <a data-sqe="link" href="https://shopee.ph/Extended-Large-Custom-Mousepad-Seventeen-Carat-i.380416948.22541460004?sp_atk=ab76cc85-b66a-49cd-a4e1-2b059d0c38d2" target="_blank">
+                    <div class="fkKLVw">
+                      <div class="ibZfW5">
+                        <div style="pointer-events: none;">
+                          <div class="_7C9UPd oi-DJp">
+                            <img width="invalid-value" height="invalid-value" alt="Extended Large Custom Mousepad Seventeen Carat" class="BxUpkW xB+NXl" style="object-fit: contain" src="https://down-ph.img.susercontent.com/file/ph-11134207-7qul6-lgdrarvf24xk48_tn">
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </a>
+            </div>
+          <div class="col-xs-12 col-lg-2 shop-collection-view__item">
+            <a data-sqe="link" href="https://shopee.ph/Extended-Large-Custom-Mousepad-Personalized-70x30cm-90x40cm-5mm-thick-i.380416948.19377770700?xptdk=bbb4d598-7549-4182-955b-363e679afd8a" target="_blank">
+              <div class="fkKLVw">
+                <div class="ibZfW5">
+                  <div style="pointer-events: none;">
+                    <div class="_7C9UPd oi-DJp">
+                      <img width="invalid-value" height="invalid-value" alt="Extended Large Custom Mousepad Personalized | 70x30cm | 90x40cm | 5mm thick" class="BxUpkW xB+NXl" style="object-fit: contain" src="https://down-ph.img.susercontent.com/file/ph-11134207-7qul3-lf6kxuf7w45q43_tn">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-xs-12 col-lg-2 shop-collection-view__item">
+            <a data-sqe="link" href="https://shopee.ph/Extended-Large-Custom-Mousepad-Hanya-Samurai-i.380416948.15496784974" target="_blank">
+              <div class="fkKLVw">
+                <div class="ibZfW5">
+                  <div style="pointer-events: none;">
+                    <div class="_7C9UPd oi-DJp">
+                      <img width="invalid-value" height="invalid-value" alt="Extended Large Custom Mousepad Hanya Samurai" class="BxUpkW xB+NXl" style="object-fit: contain" src="https://down-ph.img.susercontent.com/file/ph-11134201-23030-rrmduixosbov0e_tn">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-xs-12 col-lg-2 shop-collection-view__item">
+            <a data-sqe="link" href="https://shopee.ph/Extended-Large-Custom-Mousepad-Scenery-by-GBTN-i.380416948.23488456698" target="_blank">
+              <div class="fkKLVw">
+                <div class="ibZfW5">
+                  <div style="pointer-events: none;">
+                    <div class="_7C9UPd oi-DJp">
+                      <img width="invalid-value" height="invalid-value" alt="Extended Large Custom Mousepad Scenery by GBTN" class="BxUpkW xB+NXl" style="object-fit: contain" src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98p-lpbwujvpm3in81_tn">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-xs-12 col-lg-2 shop-collection-view__item">
+            <a data-sqe="link" href="https://shopee.ph/Extended-Large-Custom-Mousepad-Maneki-Neko-i.380416948.23523287304?sp_atk=33dab0f2-d770-40a9-a953-e59ca4aa8ca9" target="_blank">
+              <div class="fkKLVw">
+                <div class="ibZfW5">
+                  <div style="pointer-events: none;">
+                    <div class="_7C9UPd oi-DJp">
+                      <img width="invalid-value" height="invalid-value" alt="Extended Large Custom Mousepad Maneki Neko" class="BxUpkW xB+NXl" style="object-fit: contain" src="https://down-ph.img.susercontent.com/file/sg-11134201-23020-xcfm5vryfdnv2f_tn">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-xs-12 col-lg-2 shop-collection-view__item">
+            <a data-sqe="link" href="https://shopee.ph/Extended-Large-Custom-Mousepad-Nora's-Dream-2-i.380416948.23684606806?sp_atk=41624b46-2162-4e66-87ad-3293bf8f6e85&xptdk=41624b46-2162-4e66-87ad-3293bf8f6e85" target="_blank">
+              <div class="fkKLVw">
+                <div class="ibZfW5">
+                  <div style="pointer-events: none;">
+                    <div class="_7C9UPd oi-DJp">
+                      <img width="invalid-value" height="invalid-value" alt="Extended Large Custom Mousepad Nora Dream" class="BxUpkW xB+NXl" style="object-fit: contain" src="https://down-ph.img.susercontent.com/file/ph-11134207-7r992-lna5hoa9a3kqb8_tn">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+        
+
+        </div>
+
+      </div>
+
+
+      <div class="container">
+        <div class="shopee-header-section__content">
+          <div class="row">
+            <div class="col-xs-12 col-lg-2 shop-collection-view__item">
+              <a data-sqe="link" href="https://shopee.ph/Personalized-Customized-Mousepad-Own-Design-Deskmat-Extended-70x30cm-90x40cm-5mm-thick-DeskPad-i.1097798437.23685016807?sp_atk=01f024ae-3a83-478e-8c2e-496505d42e04&xptdk=01f024ae-3a83-478e-8c2e-496505d42e04" target="_blank">
+                <div class="sTeiMl">
+                  <div class="+PW5Px">
+                    <div style="pointer-events: none;">
+                      <div class="_7C9UPd oi-DJp">
+                        <img width="invalid-value" height="invalid-value" alt="Personalized Customized Mousepad Own Design Deskmat Extended 70x30cm 90x40cm 5mm thick DeskPad" class="BxUpkW xB+NXl" style="object-fit: contain" src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98r-lo7z7cc109or4b_tn">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </a>
+          </div>
+
+          <div class="col-xs-12 col-lg-2 shop-collection-view__item">
+            <a data-sqe="link" href="https://shopee.ph/Personalized-Customized-Gift-Own-Design-Mousepad-18x22cm-5mm-thick-Deskmat-Small-Deskpad-i.1097798437.23760365103?xptdk=7eaa19c9-562b-4106-824c-1657d47f467a" target="_blank">
+              <div class="sTeiMl">
+                <div class="+PW5Px">
+                  <div style="pointer-events: none;">
+                    <div class="_7C9UPd oi-DJp">
+                      <img width="invalid-value" height="invalid-value" alt="Personalized Customized Gift Own Design Mousepad 18x22cm 5mm thick Deskmat Small Deskpad" class="BxUpkW xB+NXl" style="object-fit: contain" src="https://down-ph.img.susercontent.com/file/ph-11134207-7r992-lo7z7cc132tnc1_tn">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-xs-12 col-lg-2 shop-collection-view__item">
+            <a data-sqe="link" href="https://shopee.ph/Personalize-Customize-Gift-Own-Design-Coaster-Round-Square-Beermat-Drink-Beverage-Coaster-i.1097798437.18586423119?xptdk=877924b0-e70d-4935-8db2-b12ce43ec372" target="_blank">
+              <div class="sTeiMl">
+                <div class="+PW5Px">
+                  <div style="pointer-events: none;">
+                    <div class="_7C9UPd oi-DJp">
+                      <img width="invalid-value" height="invalid-value" alt="Personalize Customize Gift Own Design Coaster Round Square Beermat Drink Beverage Coaster" class="BxUpkW xB+NXl" style="object-fit: contain" src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98s-loaxv2ibugd6f3_tn">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-xs-12 col-lg-2 shop-collection-view__item">
+            <a data-sqe="link" href="https://shopee.ph/Personalized-Customized-Gift-Bifold-Printed-Leather-Wallet-Own-Design-Pouch-Statement-BillFold-i.1097798437.24201320999?xptdk=4c7aff47-b965-48c1-8bf7-a5f2680bc02a" target="_blank">
+              <div class="sTeiMl">
+                <div class="+PW5Px">
+                  <div style="pointer-events: none;">
+                    <div class="_7C9UPd oi-DJp">
+                      <img width="invalid-value" height="invalid-value" alt="Personalized Customized Gift Bifold Printed Leather Wallet Own Design Pouch Statement BillFold" class="BxUpkW xB+NXl" style="object-fit: contain" src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98v-lo8cp1yuwday76_tn"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-12 col-lg-2 shop-collection-view__item">
+              <a data-sqe="link" href="https://shopee.ph/Personalized-Custom-Gift-Own-Design-Lunch-Bag-Floral-Funny-Silly-Statement-Tote-Bag-i.1097798437.22483839766?sp_atk=cd1a6fd9-202c-4607-9ba1-2dcb40a45694&xptdk=cd1a6fd9-202c-4607-9ba1-2dcb40a45694" target="_blank">
+                <div class="sTeiMl">
+                  <div class="+PW5Px">
+                    <div style="pointer-events: none;">
+                      <div class="_7C9UPd oi-DJp">
+                        <img width="invalid-value" height="invalid-value" alt="Personalized Customized Gift Leather Sling Bag Own Design Sling with Chain Floral Womens Wallet" class="BxUpkW xB+NXl" style="object-fit: contain" src="https://down-ph.img.susercontent.com/file/ph-11134207-7r992-lo7z7cc14he378_tn">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-12 col-lg-2 shop-collection-view__item">
+              <a data-sqe="link" href="https://shopee.ph/Personalized-Customized-Gift-Leather-Sling-Bag-Own-Design-Sling-with-Chain-Floral-Womens-Wallet-i.1097798437.22258549398?sp_atk=ccf172b8-21cb-4edf-bbc0-bacc8226a5cb&xptdk=ccf172b8-21cb-4edf-bbc0-bacc8226a5cb" target="_blank">
+                <div class="sTeiMl">
+                  <div class="+PW5Px">
+                    <div style="pointer-events: none;">
+                      <div class="_7C9UPd oi-DJp">
+                        <img width="invalid-value" height="invalid-value" alt="Personalized Customized Gift Leather Sling Bag Own Design Sling with Chain Floral Womens Wallet" class="BxUpkW xB+NXl" style="object-fit: contain" src="https://down-ph.img.susercontent.com/file/ph-11134207-7r992-lo7z7cc0yv4bf1_tn">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      </div>
+    </section>
+
+    <section class="">
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <!-- <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a> -->
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+          </div>
+
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/nhel.tr/" target="_blank"><img src="images/fbblack.png" width="24" height="24"></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/nell-dugang/" target="_blank"><img src="images/linkedin.png" width="24" height="24"></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/nell.dugang/" target="_blank"><img src="images/instagram.png" width="24" height="24"></a></li>
+          </ul>
+        </footer>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
